@@ -1,0 +1,413 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300|Open+Sans:600);
+
+*{ box-sizing: border-box; }
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+
+  }
+
+h1{ /* venue name */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+	font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 0px;
+  top: 0px;
+}
+
+h2{ /* date header */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: auto;
+}
+
+h3{ /* band names */
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+h4{ /* time */
+  font-size: 14px;
+  font-style: italic;
+  display: inline-block;
+  margin-bottom: -10px;
+}
+
+.h4-padding{ /* address */
+  padding-left: 5px;
+  font-size: 14px;
+  font-style: italic;
+  display: inline-block;
+}
+
+h5{ /* search bar dull */
+  font-size: 18px;
+  color: #929497;
+  display: inline-block;
+}
+
+.h5-active{ /* search bar active */
+  font-size: 18px;
+  color: #252628;
+  display: inline-block;
+}
+
+/*----------*/
+
+.performance{
+  list-style-type: none;
+  padding: 0px;
+  max-height: 140px;
+  width: 330px;
+  overflow:scroll;
+}
+
+.performance-list{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline-block;
+  margin-bottom: -10px;
+  margin-top: 0px;
+  width: 330px;
+  max-height: 140px;
+  overflow:scroll;
+}
+
+.start-date{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  margin: 0px 0px 3px 0px;
+  font-size: 16px;
+  display: inline-block;
+  
+}
+
+.start-time{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  margin: 0px 0px 3px 0px;
+  font-size: 16px;
+  display: inline-block;
+  padding-left: 8px;
+}
+
+
+/*----------*/
+.container{
+  width: 30px;
+  background-color: #213033;
+  padding: 10px;
+  margin: 64px 0px 0px 10px;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.container2{
+  width: 100%;
+  background-color: #213033;
+  padding: 10px;
+}
+
+/*----------*/
+
+footer{
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #213033;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+/*----------*/
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: rgba(33, 48, 51, 0.92);
+  border: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  outline: none;
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: black;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857px;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px;
+}
+
+.modal-centered {  /*centers searchbar*/
+	width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -16.5px;
+  margin-left: -200px;
+}
+
+
+.modal-footer {
+  margin-top: 15px;
+  padding: 19px 20px 20px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer:before, .modal-footer:after {
+  content: " ";
+  display: table;
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-sm {
+    width: 300px;
+  }
+
+  .modal-lg {
+	width: 100%;
+    height: 100%;
+  }
+}
+
+/*----------*/
+
+#map { 
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1040;
+ }
+
+
+/*----------*/
+
+.form-control {
+  display: block;
+  margin-left: -10px;
+  width: 103px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: white;
+  background-image: none;
+  border: 0px solid #cccccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.0);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.0);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control:-moz-placeholder {
+  color: #999999;
+}
+.form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+
+/*----------*/
+
+.centered{
+	width: 133px;
+	margin: auto;
+}
+
+
+/*----------*/
+
+.btn {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 0px solid transparent;
+  white-space: nowrap;
+  padding: 0px 0px;
+  line-height: 1.42857;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: rgba(33, 48, 51, 0.00);
+  border-color: none;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+  color: #999;
+  background-color: rgba(33, 48, 51, 0.00);
+  border-color: none;
+}
+
+.open .btn-default.dropdown-toggle {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: none;
+}
+.btn-default:active, .btn-default.active {
+  background-image: none;
+}
+.open .btn-default.dropdown-toggle {
+  background-image: none;
+}
+.btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+  background-color: white;
+  border-color: none;
+}
+.btn-default .badge {
+  color: white;
+  background-color: #333333;
+}
